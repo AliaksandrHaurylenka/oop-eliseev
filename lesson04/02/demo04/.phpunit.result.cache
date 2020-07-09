@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":276:{a:2:{s:7:"defects";a:2:{s:22:"CartTest::testAddExist";i:4;s:20:"CartTest::testRemove";i:3;}s:5:"times";a:5:{s:20:"CartTest::testCreate";d:0.005;s:17:"CartTest::testAdd";d:0;s:22:"CartTest::testAddExist";d:0;s:20:"CartTest::testRemove";d:0.002;s:19:"CartTest::testClear";d:0;}}}

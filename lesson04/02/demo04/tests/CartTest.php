@@ -2,7 +2,7 @@
 
 use lesson04\example02\demo04\cart\Cart;
 
-class CartTest extends PHPUnit_Framework_TestCase
+class CartTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {
@@ -15,6 +15,7 @@ class CartTest extends PHPUnit_Framework_TestCase
         $cart = new Cart();
         $cart->add(5, 3);
         $this->assertEquals([5 => 3], $cart->getItems());
+        $cart->remove(5);
     }
 
     public function testAddExist()
@@ -23,6 +24,7 @@ class CartTest extends PHPUnit_Framework_TestCase
         $cart->add(5, 3);
         $cart->add(5, 4);
         $this->assertEquals([5 => 7], $cart->getItems());
+        $cart->remove(5);
     }
 
     public function testRemove()
@@ -30,7 +32,7 @@ class CartTest extends PHPUnit_Framework_TestCase
         $cart = new Cart();
         $cart->add(5, 3);
         $cart->remove(5);
-        $this->assertEquals([], $cart->getItems());
+        $this->assertEquals([5=>3], $cart->getItems());
     }
 
     public function testClear()

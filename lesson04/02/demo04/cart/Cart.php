@@ -1,5 +1,4 @@
 <?php
-
 namespace lesson04\example02\demo04\cart;
 
 class Cart
@@ -24,7 +23,7 @@ class Cart
     {
         $this->items = isset($_SESSION['cart']) ? unserialize($_SESSION['cart']) : [];
         if (array_key_exists($id, $this->items)) {
-            unset($this->items[$id]);
+            unset($this->items[$id]); 
         }
         $_SESSION['cart'] = serialize($this->items);
     }
