@@ -32,7 +32,7 @@ class CartTest extends \PHPUnit\Framework\TestCase
         $cart = new Cart();
         $cart->add(5, 3);
         $cart->remove(5);
-        $this->assertEquals([5=>3], $cart->getItems());
+        $this->assertEquals([], $cart->getItems());
     }
 
     public function testClear()
