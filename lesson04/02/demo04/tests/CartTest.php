@@ -2,7 +2,7 @@
 
 use lesson04\example02\demo04\cart\Cart;
 
-class CartTest extends \PHPUnit\Framework\TestCase
+class CartTest extends PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {
