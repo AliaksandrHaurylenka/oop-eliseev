@@ -18,7 +18,7 @@ class MemoryStorage implements StorageInterface
     }
 }
 
-class CartTest extends \PHPUnit_Framework_TestCase
+class CartTest extends \PHPUnit\Framework\TestCase
 {
     /** @var Cart*/
     private $cart;
