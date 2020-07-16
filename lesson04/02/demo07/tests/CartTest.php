@@ -23,7 +23,7 @@ class CartTest extends \PHPUnit\Framework\TestCase
     /** @var Cart*/
     private $cart;
     
-    public function setUp()
+    public function setUp(): void
     {
         $this->cart = new Cart(new MemoryStorage());
         parent::setUp();

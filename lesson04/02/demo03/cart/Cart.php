@@ -15,8 +15,8 @@ class Cart
     public function add($id, $count)
     {
         $this->items = isset($_SESSION['cart']) ? unserialize($_SESSION['cart']) : [];
-        $current = isset($this->items[$id]) ? $this->items[$id] : 0;
-        $this->items[$id] = $current + $count;
+        $current = isset($this->items[$id]) ? $this->items[$id] : 0; // если в сессии уже есть количество товаров с таким id, то
+        $this->items[$id] = $current + $count; // прибавляем еще добавленное количество товаров
         $_SESSION['cart'] = serialize($this->items);
     }
 
