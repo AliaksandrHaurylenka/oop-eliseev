@@ -19,11 +19,11 @@ class MemoryStorage implements StorageInterface
     }
 }
 
-class CartTest extends \PHPUnit_Framework_TestCase
+class CartTest extends \PHPUnit\Framework\TestCase
 {
     private $cart;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->cart = new Cart(new MemoryStorage(), new SimpleCost());
         parent::setUp();

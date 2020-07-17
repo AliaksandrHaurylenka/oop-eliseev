@@ -6,7 +6,7 @@ use lesson04\example02\demo09\cart\cost\BirthdayCost;
 use lesson04\example02\demo09\cart\cost\MinCost;
 use lesson04\example02\demo09\tests\cost\DummyCost;
 
-class MinCostTest extends \PHPUnit_Framework_TestCase
+class MinCostTest extends \PHPUnit\Framework\TestCase
 {
     public function testMin()
     {

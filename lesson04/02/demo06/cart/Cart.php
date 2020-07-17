@@ -7,6 +7,7 @@ class Cart
     /** @var CartItem[] */
     private $items;
 
+    
     public function getItems()
     {
         $this->loadItems();
@@ -17,6 +18,7 @@ class Cart
     {
         $this->loadItems();
         $current = isset($this->items[$id]) ? $this->items[$id]->getCount() : 0;
+        var_dump($current);
         $this->items[$id] = new CartItem($id, $current + $count, $price);
         $this->saveItems();
     }

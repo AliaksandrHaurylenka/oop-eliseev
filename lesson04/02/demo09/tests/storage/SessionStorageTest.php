@@ -5,7 +5,7 @@ namespace lesson04\example02\demo09\tests\storage;
 use lesson04\example02\demo09\cart\CartItem;
 use lesson04\example02\demo09\cart\storage\SessionStorage;
 
-class SessionStorageTest extends \PHPUnit_Framework_TestCase
+class SessionStorageTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {

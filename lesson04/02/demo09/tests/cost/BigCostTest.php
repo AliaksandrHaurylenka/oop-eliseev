@@ -4,7 +4,7 @@ namespace lesson04\example02\demo09\tests\cost;
 
 use lesson04\example02\demo09\cart\cost\BigCost;
 
-class BigCostTest extends \PHPUnit_Framework_TestCase
+class BigCostTest extends \PHPUnit\Framework\TestCase
 {
     public function testActive()
     {

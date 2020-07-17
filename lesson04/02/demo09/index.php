@@ -9,29 +9,31 @@ use lesson04\example02\demo09\cart\cost\SimpleCost;
 use lesson04\example02\demo09\cart\storage\YiiDbStorage;
 use lesson04\example02\demo09\cart\storage\HybridStorage;
 use lesson04\example02\demo09\cart\storage\YiiSessionStorage;
+use lesson04\example02\demo09\cart\storage\SessionStorage;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$sessionStorage = new YiiSessionStorage('cart');
+// $sessionStorage = new YiiSessionStorage('cart');
 
-if (!Yii::$app->user->isGuest) {
-    $storage = new HybridStorage(
-        $sessionStorage,
-        new YiiDbStorage(Yii::$app->user->id)
-    );
-} else {
-    $storage = $sessionStorage;
-}
+// if (!Yii::$app->user->isGuest) {
+//     $storage = new HybridStorage(
+//         $sessionStorage,
+//         new YiiDbStorage(Yii::$app->user->id)
+//     );
+// } else {
+//     $storage = $sessionStorage;
+// }
 
 $simpleCost = new SimpleCost();
+$storage = new SessionStorage('cart');
 $calculator = new MinCost(
     new FridayCost($simpleCost, 5, date('Y-m-d')),
     new NewYearCost($simpleCost, date('m'), 3)
 );
 
-if (!Yii::$app->user->isGuest) {
-    $calculator = new BirthdayCost($calculator, 7, Yii::$app->user->identity->birthDate, date('Y-m-d'));
-}
+// if (!Yii::$app->user->isGuest) {
+//     $calculator = new BirthdayCost($calculator, 7, Yii::$app->user->identity->birthDate, date('Y-m-d'));
+// }
 
 $cart = new Cart($storage, $calculator);
 

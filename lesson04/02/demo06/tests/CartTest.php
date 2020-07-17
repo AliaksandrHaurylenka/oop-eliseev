@@ -4,7 +4,7 @@ namespace lesson04\example02\demo06\tests;
 
 use lesson04\example02\demo06\cart\Cart;
 
-class CartTest extends \PHPUnit_Framework_TestCase
+class CartTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {
@@ -21,6 +21,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(5, $items[5]->getId());
         $this->assertEquals(3, $items[5]->getCount());
         $this->assertEquals(100, $items[5]->getPrice());
+        $cart->remove(5);
     }
 
     public function testAddExist()
@@ -31,6 +32,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1, count($items = $cart->getItems()));
         $this->assertNotNull($items[5]);
         $this->assertEquals(7, $items[5]->getCount());
+        $cart->remove(5);
     }
 
     public function testRemove()

@@ -7,5 +7,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 $cart = new Cart();
 
 $cart->add(5, 6, 100);
+$cart->add(5, 3, 100);
 
 echo $cart->getCost() . PHP_EOL;

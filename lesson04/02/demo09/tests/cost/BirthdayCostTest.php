@@ -5,7 +5,7 @@ namespace lesson04\example02\demo09\tests\storage;
 use lesson04\example02\demo09\cart\cost\BirthdayCost;
 use lesson04\example02\demo09\tests\cost\DummyCost;
 
-class BirthdayCostTest extends \PHPUnit_Framework_TestCase
+class BirthdayCostTest extends \PHPUnit\Framework\TestCase
 {
     public function testActive()
     {

@@ -5,7 +5,7 @@ namespace lesson04\example02\demo09\tests\storage;
 use lesson04\example02\demo09\cart\CartItem;
 use lesson04\example02\demo09\cart\cost\SimpleCost;
 
-class SimpleCostTest extends \PHPUnit_Framework_TestCase
+class SimpleCostTest extends \PHPUnit\Framework\TestCase
 {
     public function testCalculate()
     {
