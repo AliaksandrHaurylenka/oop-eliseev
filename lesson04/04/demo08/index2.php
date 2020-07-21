@@ -21,5 +21,5 @@ $loader->load('services.yml');
 $cart = $container->get('cart');
 
 $cart->add(1, 3, 100);
-print_r($cart->getItems());
+var_dump($cart->getItems());
  

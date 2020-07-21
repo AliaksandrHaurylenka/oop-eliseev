@@ -79,5 +79,5 @@ $cart->add(1, 3, 100);
 print_r($cart->getItems());
 
 $cart2 = $container->get('cart');
-print_r($cart2->getItems());
+var_dump($cart2->getItems());
  

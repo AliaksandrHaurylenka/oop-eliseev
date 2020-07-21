@@ -36,10 +36,10 @@ $container['cart'] = $container->share(function (Pimple $container) {
 $cart = $container['cart'];
 
 $cart->add(1, 3, 100);
-print_r($cart->getItems());
+var_dump($cart->getItems());
 
 /** @var Cart $cart2 */
 $cart2 = $container['cart'];
 
-print_r($cart2->getItems());
+var_dump($cart2->getItems());
  
