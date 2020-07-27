@@ -108,7 +108,7 @@ class Player
 }
 
 $player = new Player();
-$player->insert(new Disc(['Track 1', 'Track 2', 'Track 3']));
+//$player->insert(new Disc(['Track 1', 'Track 2', 'Track 3']));
 
 try {
     $player->play();

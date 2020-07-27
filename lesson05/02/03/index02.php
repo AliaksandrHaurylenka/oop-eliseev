@@ -15,5 +15,5 @@ $rows = openCsv(__DIR__ . '/list.csv');
 
 foreach ($rows as $row) {
     print_r($row);
-    break;
+//    break;
 }
